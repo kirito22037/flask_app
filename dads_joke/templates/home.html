@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            {% if title %}
+                {{ title }}
+            {% else %}
+                Home for Jokes
+            {% endif %}
+        </title>
+    </head>
+
+    <body>
+        <div class="mainjoke">
+            <h1>
+                {% if joke_obj %}
+                    {{  joke_obj['joke'] }}
+                {% else %}
+
+                        NOTHING TO SHOW!!
+
+                {% endif %}
+            </h1>
+        </div>
+    </body>
+</html>
