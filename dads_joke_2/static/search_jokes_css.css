@@ -1,0 +1,58 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.search_bar
+{
+    margin-top: 5%;
+    display: inline-block;
+    width:60%;
+    padding:0% 10%;
+}
+
+.searchbar
+{
+    float:left;
+    width:80%;
+    height:30px;
+    border-radius: 5px;
+    border:1px solid black;
+    padding-left:10px;
+    
+}
+
+.submitbtn
+{
+    width:20%;
+    height:30px;
+    border-radius: 5px;
+    border:1px solid black;
+    font-family: cursive;
+    background-color: yellow;
+}
+
+.maincontent
+{
+    height: 80%;
+    width: 90%;
+    position: relative;
+    display: inline-block;
+    font-family: cursive;
+}
+
+.joke
+{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

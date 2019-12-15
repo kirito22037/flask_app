@@ -1,0 +1,52 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet"  type="text/css" href="{{ url_for('static',filename='search_jokes_css.css') }}">
+
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        -->
+        <title>
+            {% if title %}
+                {{ title }}
+            {% else %}
+                Dads Jokes
+            {% endif %}
+        </title>
+        
+    </head>
+
+    <body >
+
+        <div class="search_bar">
+            
+                <form method="POST" action="" >
+                    {{ form.hidden_tag() }}  <!--for incryption , secuity-->
+
+                    {{ form.searchfield(class="searchbar") }}
+                
+                    {{ form.submit(class="submitbtn") }}
+                </form>             
+        
+        </div>
+
+        <div class="maincontent">
+
+            <!--<h1 class="joke">if i write some thing here this should be at the middle of the page .</h1>
+            -->
+            
+            {% if total_jokes!=0 %}
+                <h1 class="joke"> {{ joke }} </h1>
+            {% else %}
+                <h1 class="joke"> SORRY ! No jokes for the searched item found !! </h1>
+            {% endif %}
+        
+
+
+        </div>
+
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    -->
+    </body>
+</html>
