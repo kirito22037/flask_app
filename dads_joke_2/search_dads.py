@@ -17,9 +17,18 @@ obj1=search_jokes(user_input)
 
 print(obj1.json())
 
-jokes_collection=obj1.json()['results']  # a list of jokes with key id and joke
-total_jokes=obj1.json()['total_jokes']
-joke=choice(jokes_collection)['joke']
+if obj1.json()['total_jokes']==0:
+    print('NO JOKE RELATED TO THAT TOPIC FOUND!!')
+    
+
+elif obj1.json()['status']!=200:
+    print("ERROR 404! CLIENT SIDE PROBLEM !")
+
+else:
+    jokes_collection=obj1.json()['results']  # a list of jokes with key id and joke
+    total_jokes=obj1.json()['total_jokes']
+    joke=choice(jokes_collection)['joke']
+    print(f'joke : {joke}')
 
 #if total_jokes==0:
 #    print(f'sorry ! no jokes found for {user_input}')
